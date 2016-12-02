@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TabBarScreen-1-TC">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Screen-->
+        <scene sceneID="TabBarScreen-1-Tabbar-Scene">
+            <objects>
+                <tabBarController id="TabBarScreen-1-TC" sceneMemberID="viewController" userLabel="Tab Bar Controller" restorationIdentifier="tabBarScreen" storyboardIdentifier="tabBarScreen"  customClass="ANTabBarController" >
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="TabBarScreen-1-TabBar">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="overlayVCIdentifier" value="TabBarScreenOverlayVC"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                        
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="hidesTabBar" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="screen-4de21534-e66e-4dba-991c-aa439b09d6b5-NC" kind="relationship" relationship="viewControllers" id="TabBarScreen-1-Tab-1"/>
+                        <segue destination="screen-2-NC" kind="relationship" relationship="viewControllers" id="TabBarScreen-1-Tab-2"/>
+                    </connections>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TabBarScreen-1-TC-FR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0" y="0"/>
+        </scene>
+<!--Tab Bar Screen-->
+        <scene sceneID="TabBarScreen-1-Scene">
+            <objects>
+                <viewController restorationIdentifier="TabBarScreenOverlayVC" storyboardIdentifier="TabBarScreenOverlayVC" id="TabBarScreen-1-VC" userLabel="Tab Bar Overlay" sceneMemberID="viewController" customClass="APTabBarScreenOverlayVC" customModuleProvider="target">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TabBarScreen-1-Top"/>
+                        <viewControllerLayoutGuide type="bottom" id="TabBarScreen-1-Bottom"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TabBarScreen-1" customClass="ANTabBarOverlayView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <subviews>
+    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="View-2" userLabel="Me Button"  >
+        <rect key="frame" x="251" y="607" width="124" height="60"/>
+        <color key="backgroundColor" red="0.1294118" green="0.1294118" blue="0.1294118" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                <gestureRecognizers/>
+                                    <outletCollection property="gestureRecognizers" destination="TabBarScreen-1-meButtonTap-GR" appends="YES" id="View-2-meButtonTap-GR-V-CON"/>
+                                </connections>
+        <subviews>
+    <imageView image="user pagehappy" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-13" userLabel="Happy"   >
+        <rect key="frame" x="43.5" y="10" width="37" height="38"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+    <imageView image="Happy Color" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-18" userLabel="Happy Color" alpha="0"  >
+        <rect key="frame" x="44" y="11" width="37" height="37"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+        </subviews>
+        <constraints>
+            <constraint secondAttribute="centerY" secondItem="View-2" firstItem="image-13" firstAttribute="centerY" constant="-1" priority="986" id="image-13-centerVertically" userLabel="Happy-centerY"/>
+            <constraint secondAttribute="centerX" secondItem="View-2" firstItem="image-13" firstAttribute="centerX" constant="0" priority="987" id="image-13-centerHorizontally" userLabel="Happy-centerX"/>
+            <constraint firstItem="image-13" firstAttribute="width" constant="37" priority="971" id="image-13-width" userLabel="Happy-width"/>
+            <constraint firstItem="image-13" firstAttribute="height" constant="38" priority="972" id="image-13-height" userLabel="Happy-height"/>
+            <constraint secondAttribute="centerY" secondItem="View-2" firstItem="image-18" firstAttribute="centerY" constant="-0.5" priority="986" id="image-18-centerVertically" userLabel="Happy Color-centerY"/>
+            <constraint secondAttribute="centerX" secondItem="View-2" firstItem="image-18" firstAttribute="centerX" constant="0.5" priority="987" id="image-18-centerHorizontally" userLabel="Happy Color-centerX"/>
+            <constraint firstItem="image-18" firstAttribute="width" constant="37" priority="971" id="image-18-width" userLabel="Happy Color-width"/>
+            <constraint firstItem="image-18" firstAttribute="height" constant="37" priority="972" id="image-18-height" userLabel="Happy Color-height"/>
+        </constraints>
+    </view>
+    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="View-3" userLabel="Post Button"  >
+        <rect key="frame" x="122" y="607" width="131" height="60"/>
+        <color key="backgroundColor" red="0.9686275" green="0.2745098" blue="0.2901961" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                <gestureRecognizers/>
+                                    <outletCollection property="gestureRecognizers" destination="TabBarScreen-1-postButtonTap-GR" appends="YES" id="View-3-postButtonTap-GR-V-CON"/>
+                                </connections>
+        <subviews>
+    <imageView image="user pageup icon" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-12" userLabel="Up Icon"   >
+        <rect key="frame" x="46.5" y="11" width="38" height="38"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+        </subviews>
+        <constraints>
+            <constraint secondAttribute="centerY" secondItem="View-3" firstItem="image-12" firstAttribute="centerY" constant="0" priority="986" id="image-12-centerVertically" userLabel="Up Icon-centerY"/>
+            <constraint secondAttribute="centerX" secondItem="View-3" firstItem="image-12" firstAttribute="centerX" constant="0" priority="987" id="image-12-centerHorizontally" userLabel="Up Icon-centerX"/>
+            <constraint firstItem="image-12" firstAttribute="width" constant="38" priority="971" id="image-12-width" userLabel="Up Icon-width"/>
+            <constraint firstItem="image-12" firstAttribute="height" constant="38" priority="972" id="image-12-height" userLabel="Up Icon-height"/>
+        </constraints>
+    </view>
+    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="View-4" userLabel="Feed Button"  >
+        <rect key="frame" x="0" y="607" width="124" height="60"/>
+        <color key="backgroundColor" red="0.1294118" green="0.1294118" blue="0.1294118" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                <gestureRecognizers/>
+                                    <outletCollection property="gestureRecognizers" destination="TabBarScreen-1-feedButtonTap-GR" appends="YES" id="View-4-feedButtonTap-GR-V-CON"/>
+                                </connections>
+        <subviews>
+    <imageView image="user pagefeed" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-14" userLabel="Feed" alpha="0"  >
+        <rect key="frame" x="43" y="14.5" width="38" height="31"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+    <imageView image="Feed Color" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-21" userLabel="Feed Color"   >
+        <rect key="frame" x="43" y="14.5" width="38" height="31"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+        </subviews>
+        <constraints>
+            <constraint secondAttribute="centerY" secondItem="View-4" firstItem="image-14" firstAttribute="centerY" constant="0" priority="986" id="image-14-centerVertically" userLabel="Feed-centerY"/>
+            <constraint secondAttribute="centerX" secondItem="View-4" firstItem="image-14" firstAttribute="centerX" constant="0" priority="987" id="image-14-centerHorizontally" userLabel="Feed-centerX"/>
+            <constraint firstItem="image-14" firstAttribute="width" constant="38" priority="971" id="image-14-width" userLabel="Feed-width"/>
+            <constraint firstItem="image-14" firstAttribute="height" constant="31" priority="972" id="image-14-height" userLabel="Feed-height"/>
+            <constraint secondAttribute="centerY" secondItem="View-4" firstItem="image-21" firstAttribute="centerY" constant="0" priority="986" id="image-21-centerVertically" userLabel="Feed Color-centerY"/>
+            <constraint secondAttribute="centerX" secondItem="View-4" firstItem="image-21" firstAttribute="centerX" constant="0" priority="987" id="image-21-centerHorizontally" userLabel="Feed Color-centerX"/>
+            <constraint firstItem="image-21" firstAttribute="width" constant="38" priority="971" id="image-21-width" userLabel="Feed Color-width"/>
+            <constraint firstItem="image-21" firstAttribute="height" constant="31" priority="972" id="image-21-height" userLabel="Feed Color-height"/>
+        </constraints>
+    </view>
+        </subviews>
+        <constraints>
+            <constraint multiplier="0.3307" secondAttribute="width" secondItem="TabBarScreen-1" firstItem="View-2" firstAttribute="width" constant="0" priority="980" id="View-2-width" userLabel="Me Button-width"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="TabBarScreen-1" firstItem="View-2" firstAttribute="bottom" constant="0" priority="983" id="View-2-bottom" userLabel="Me Button-bottom"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="TabBarScreen-1" firstItem="View-2" firstAttribute="right" constant="0" priority="985" id="View-2-right" userLabel="Me Button-right"/>
+            <constraint firstItem="View-2" firstAttribute="height" constant="60" priority="972" id="View-2-height" userLabel="Me Button-height"/>
+            <constraint multiplier="0.3493333" secondAttribute="width" secondItem="TabBarScreen-1" firstItem="View-3" firstAttribute="width" constant="0" priority="980" id="View-3-width" userLabel="Post Button-width"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="TabBarScreen-1" firstItem="View-3" firstAttribute="bottom" constant="0" priority="983" id="View-3-bottom" userLabel="Post Button-bottom"/>
+            <constraint secondAttribute="centerX" secondItem="TabBarScreen-1" firstItem="View-3" firstAttribute="centerX" constant="0" priority="987" id="View-3-centerHorizontally" userLabel="Post Button-centerX"/>
+            <constraint firstItem="View-3" firstAttribute="height" constant="60" priority="972" id="View-3-height" userLabel="Post Button-height"/>
+            <constraint multiplier="0.3306667" secondAttribute="width" secondItem="TabBarScreen-1" firstItem="View-4" firstAttribute="width" constant="0" priority="980" id="View-4-width" userLabel="Feed Button-width"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="TabBarScreen-1" firstItem="View-4" firstAttribute="bottom" constant="0" priority="983" id="View-4-bottom" userLabel="Feed Button-bottom"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="TabBarScreen-1" firstItem="View-4" firstAttribute="left" constant="0" priority="984" id="View-4-left" userLabel="Feed Button-left"/>
+            <constraint firstItem="View-4" firstAttribute="height" constant="60" priority="972" id="View-4-height" userLabel="Feed Button-height"/>
+        </constraints>
+                                <connections>
+                                </connections>
+</view>
+                    <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesNavBar" value="YES"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesStatusBar" value="NO"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="lightStatusBar" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <segue destination="screen-3-VC" kind="presentation" identifier="tabBarScreen -> post - Modal" id="tabBarScreen-Seg-1"/>
+                        <outlet property="meButton" destination="View-2" id="meButton-TabBarScreen-1-Prop"/>
+                        <outlet property="meButtonHappy" destination="image-13" id="meButtonHappy-TabBarScreen-1-Prop"/>
+                        <outlet property="meButtonHappyColor" destination="image-18" id="meButtonHappyColor-TabBarScreen-1-Prop"/>
+                        <outlet property="postButton" destination="View-3" id="postButton-TabBarScreen-1-Prop"/>
+                        <outlet property="postButtonUpIcon" destination="image-12" id="postButtonUpIcon-TabBarScreen-1-Prop"/>
+                        <outlet property="feedButton" destination="View-4" id="feedButton-TabBarScreen-1-Prop"/>
+                        <outlet property="feedButtonFeed" destination="image-14" id="feedButtonFeed-TabBarScreen-1-Prop"/>
+                        <outlet property="feedButtonFeedColor" destination="image-21" id="feedButtonFeedColor-TabBarScreen-1-Prop"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TabBarScreen-1-FR" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="TabBarScreen-1-meButtonTap-GR" userLabel="meButtonTap">
+                    <connections>
+                        <action selector="meButtonTapWithSender:" destination="TabBarScreen-1-VC" id="TabBarScreen-1-meButtonTap-CON-VC"/>
+                        
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="TabBarScreen-1-postButtonTap-GR" userLabel="postButtonTap">
+                    <connections>
+                        <action selector="postButtonTapWithSender:" destination="TabBarScreen-1-VC" id="TabBarScreen-1-postButtonTap-CON-VC"/>
+                        
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="TabBarScreen-1-feedButtonTap-GR" userLabel="feedButtonTap">
+                    <connections>
+                        <action selector="feedButtonTapWithSender:" destination="TabBarScreen-1-VC" id="TabBarScreen-1-feedButtonTap-CON-VC"/>
+                        
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="475" y="0"/>
+        </scene>
+    
+<!--Feed Navigation Controller-->
+        <scene sceneID="screen-4de21534-e66e-4dba-991c-aa439b09d6b5-NC-Scene">
+            <objects>
+                <navigationController restorationIdentifier="feedNC" storyboardIdentifier="feedNC" id="screen-4de21534-e66e-4dba-991c-aa439b09d6b5-NC" title="Feed Navigation Controller" sceneMemberID="viewController" customClass="ANNavigationController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="64"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="screen-4de21534-e66e-4dba-991c-aa439b09d6b5-NC-BAR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="screen-4de21534-e66e-4dba-991c-aa439b09d6b5-VC" kind="relationship" relationship="rootViewController" id="screen-4de21534-e66e-4dba-991c-aa439b09d6b5-NC-ROOT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="screen-4de21534-e66e-4dba-991c-aa439b09d6b5-NC-FR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0" y="2694"/>
+</scene>
+<!--Feed-->
+        <scene sceneID="screen-4de21534-e66e-4dba-991c-aa439b09d6b5-Scene">
+            <objects>
+                <viewController restorationIdentifier="feed" storyboardIdentifier="feed" id="screen-4de21534-e66e-4dba-991c-aa439b09d6b5-VC" userLabel="Feed" sceneMemberID="viewController" customClass="APFeedVC" customModuleProvider="target">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="screen-4de21534-e66e-4dba-991c-aa439b09d6b5-Top"/>
+                        <viewControllerLayoutGuide type="bottom" id="screen-4de21534-e66e-4dba-991c-aa439b09d6b5-Bottom"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="screen-4de21534-e66e-4dba-991c-aa439b09d6b5" >
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <subviews>
+    <tableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Table-2" userLabel="Posts Table"   alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" pagingEnabled="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28">
+        <rect key="frame" x="0" y="0" width="375" height="603"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="screen-4de21534-e66e-4dba-991c-aa439b09d6b5-VC" id="Table-2-DataSource"/>
+                                    <outlet property="delegate" destination="screen-4de21534-e66e-4dba-991c-aa439b09d6b5-VC" id="Table-2-Delegate"/>
+                                </connections>
+        <color key="separatorColor" red="0.96632" green="0.2752283" blue="0.2894721" alpha="1" colorSpace="calibratedRGB"/>
+        <inset key="separatorInset" minX="0" minY="0.0" maxX="0.0" maxY="0.0"/>
+        <constraints>
+        </constraints>
+        <prototypes>
+                     <tableViewCell rowHeight="170" id="Cell-2-Cell" userLabel="Post Cell" selectionStyle="none" indentationWidth="10" reuseIdentifier="postcell" clipsSubviews="YES" contentMode="scaleToFill" customClass="APPostcell" customModuleProvider="target">
+                        <rect key="frame" x="0" y="0" width="375" height="170"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cell-2" userLabel="Cell ContentView"   tableViewCell="Cell-2-Cell">
+        <rect key="frame" x="0" y="0" width="375" height="170"/>
+        <color key="backgroundColor" red="0.999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                            <autoresizingMask key="autoresizingMask"/>
+        <subviews>
+    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="View-18" userLabel="Share Touch Area"  >
+        <rect key="frame" x="325" y="0" width="50" height="50"/>
+        <color key="backgroundColor" red="0.999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                <gestureRecognizers/>
+                                </connections>
+        <constraints>
+        </constraints>
+    </view>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-4" userLabel="Joke Label"   textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text">...</string>
+        <rect key="frame" x="20" y="60" width="335" height="110"/>
+        <color key="backgroundColor" red="0.129842" green="0.1298461" blue="0.129844" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="14" name="AvenirNext-Regular" family="Avenir Next" />
+        <color key="textColor" red="0.1294118" green="0.1294118" blue="0.1294118" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+    <imageView image="" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-17" userLabel="Image"   >
+        <rect key="frame" x="20" y="10" width="50" height="50"/>
+        <color key="backgroundColor" red="0.8352941" green="0.8352941" blue="0.8352941" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="anCornerRadius">
+                <real key="value" value="25"/>
+            </userDefinedRuntimeAttribute>
+        
+            <userDefinedRuntimeAttribute type="color" keyPath="anBorderColor">
+                <color key="value" red="0.2605174" green="0.2605244" blue="0.2605206" alpha="1" colorSpace="calibratedRGB"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="anBorderWidth">
+                <real key="value" value="1"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-13" userLabel="Name Label"   textAlignment="left" lineBreakMode="wordWrap" numberOfLines="4" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text">...</string>
+        <rect key="frame" x="80" y="10" width="193" height="27"/>
+        <color key="backgroundColor" red="0.129842" green="0.1298461" blue="0.129844" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="14" name="AvenirNext-Medium" family="Avenir Next" />
+        <color key="textColor" red="0.1294118" green="0.1294118" blue="0.1294118" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-14" userLabel="Time Label"   textAlignment="left" lineBreakMode="wordWrap" numberOfLines="4" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text">...</string>
+        <rect key="frame" x="80" y="30" width="122" height="26"/>
+        <color key="backgroundColor" red="0.129842" green="0.1298461" blue="0.129844" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="12" name="AvenirNext-Regular" family="Avenir Next" />
+        <color key="textColor" red="0.1294118" green="0.1294118" blue="0.1294118" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="View-14" userLabel="Share Container"  >
+        <rect key="frame" x="339" y="24" width="16" height="4"/>
+        <color key="backgroundColor" red="0.6078432" green="0.7647059" blue="0.9019608" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                <gestureRecognizers/>
+                                </connections>
+        <subviews>
+    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="View-15" userLabel="FacebookButton"  >
+        <rect key="frame" x="12" y="0" width="4" height="4"/>
+        <color key="backgroundColor" red="0.9647059" green="0.2745098" blue="0.2862745" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="anCornerRadius">
+                <real key="value" value="2"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <subviews>
+    <imageView image="Facebook" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-28" userLabel="Image: Facebook" alpha="0"  >
+        <rect key="frame" x="-14" y="-14" width="32" height="32"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="color" keyPath="anImageTint">
+                <color key="value" red="0.999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+        </subviews>
+        <constraints>
+            <constraint secondAttribute="centerY" secondItem="View-15" firstItem="image-28" firstAttribute="centerY" constant="0" priority="986" id="image-28-centerVertically" userLabel="Image: Facebook-centerY"/>
+            <constraint secondAttribute="centerX" secondItem="View-15" firstItem="image-28" firstAttribute="centerX" constant="0" priority="987" id="image-28-centerHorizontally" userLabel="Image: Facebook-centerX"/>
+            <constraint firstItem="image-28" firstAttribute="width" constant="32" priority="971" id="image-28-width" userLabel="Image: Facebook-width"/>
+            <constraint firstItem="image-28" firstAttribute="height" constant="32" priority="972" id="image-28-height" userLabel="Image: Facebook-height"/>
+        </constraints>
+    </view>
+    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="View-16" userLabel="TwitterButton"  >
+        <rect key="frame" x="6" y="0" width="4" height="4"/>
+        <color key="backgroundColor" red="0.9647059" green="0.2745098" blue="0.2862745" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="anCornerRadius">
+                <real key="value" value="2"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <subviews>
+    <imageView image="Twitter" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-29" userLabel="Image: Twitter" alpha="0"  >
+        <rect key="frame" x="-10" y="-10" width="24" height="24"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="color" keyPath="anImageTint">
+                <color key="value" red="0.999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+        </subviews>
+        <constraints>
+            <constraint secondAttribute="centerY" secondItem="View-16" firstItem="image-29" firstAttribute="centerY" constant="0" priority="986" id="image-29-centerVertically" userLabel="Image: Twitter-centerY"/>
+            <constraint secondAttribute="centerX" secondItem="View-16" firstItem="image-29" firstAttribute="centerX" constant="0" priority="987" id="image-29-centerHorizontally" userLabel="Image: Twitter-centerX"/>
+            <constraint firstItem="image-29" firstAttribute="width" constant="24" priority="971" id="image-29-width" userLabel="Image: Twitter-width"/>
+            <constraint firstItem="image-29" firstAttribute="height" constant="24" priority="972" id="image-29-height" userLabel="Image: Twitter-height"/>
+        </constraints>
+    </view>
+    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="View-17" userLabel="CloseButton"  >
+        <rect key="frame" x="0" y="0" width="4" height="4"/>
+        <color key="backgroundColor" red="0.9647059" green="0.2745098" blue="0.2862745" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="anCornerRadius">
+                <real key="value" value="2"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                <gestureRecognizers/>
+                                </connections>
+        <subviews>
+    <imageView image="Close" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-30" userLabel="Image: Close" alpha="0"  >
+        <rect key="frame" x="-10" y="-10" width="24" height="24"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="color" keyPath="anImageTint">
+                <color key="value" red="0.999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+        </subviews>
+        <constraints>
+            <constraint secondAttribute="centerY" secondItem="View-17" firstItem="image-30" firstAttribute="centerY" constant="0" priority="986" id="image-30-centerVertically" userLabel="Image: Close-centerY"/>
+            <constraint secondAttribute="centerX" secondItem="View-17" firstItem="image-30" firstAttribute="centerX" constant="0" priority="987" id="image-30-centerHorizontally" userLabel="Image: Close-centerX"/>
+            <constraint firstItem="image-30" firstAttribute="width" constant="24" priority="971" id="image-30-width" userLabel="Image: Close-width"/>
+            <constraint firstItem="image-30" firstAttribute="height" constant="24" priority="972" id="image-30-height" userLabel="Image: Close-height"/>
+        </constraints>
+    </view>
+        </subviews>
+        <constraints>
+            <constraint multiplier="0.25" secondAttribute="width" secondItem="View-14" firstItem="View-15" firstAttribute="width" constant="0" priority="980" id="View-15-width" userLabel="FacebookButton-width"/>
+            <constraint multiplier="1" secondAttribute="height" secondItem="View-14" firstItem="View-15" firstAttribute="height" constant="0" priority="981" id="View-15-height" userLabel="FacebookButton-height"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="View-14" firstItem="View-15" firstAttribute="right" constant="0" priority="985" id="View-15-right" userLabel="FacebookButton-right"/>
+            <constraint secondAttribute="centerY" secondItem="View-14" firstItem="View-15" firstAttribute="centerY" constant="0" priority="986" id="View-15-centerVertically" userLabel="FacebookButton-centerY"/>
+            <constraint multiplier="0.25" secondAttribute="width" secondItem="View-14" firstItem="View-16" firstAttribute="width" constant="0" priority="980" id="View-16-width" userLabel="TwitterButton-width"/>
+            <constraint multiplier="1" secondAttribute="height" secondItem="View-14" firstItem="View-16" firstAttribute="height" constant="0" priority="981" id="View-16-height" userLabel="TwitterButton-height"/>
+            <constraint secondAttribute="centerY" secondItem="View-14" firstItem="View-16" firstAttribute="centerY" constant="0" priority="986" id="View-16-centerVertically" userLabel="TwitterButton-centerY"/>
+            <constraint secondAttribute="centerX" secondItem="View-14" firstItem="View-16" firstAttribute="centerX" constant="0" priority="987" id="View-16-centerHorizontally" userLabel="TwitterButton-centerX"/>
+            <constraint multiplier="0.25" secondAttribute="width" secondItem="View-14" firstItem="View-17" firstAttribute="width" constant="0" priority="980" id="View-17-width" userLabel="CloseButton-width"/>
+            <constraint multiplier="1" secondAttribute="height" secondItem="View-14" firstItem="View-17" firstAttribute="height" constant="0" priority="981" id="View-17-height" userLabel="CloseButton-height"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="View-14" firstItem="View-17" firstAttribute="left" constant="0" priority="984" id="View-17-left" userLabel="CloseButton-left"/>
+            <constraint secondAttribute="centerY" secondItem="View-14" firstItem="View-17" firstAttribute="centerY" constant="0" priority="986" id="View-17-centerVertically" userLabel="CloseButton-centerY"/>
+        </constraints>
+    </view>
+        </subviews>
+        <constraints>
+            <constraint multiplier="1" secondAttribute="top" secondItem="Cell-2" firstItem="View-18" firstAttribute="top" constant="0" priority="982" id="View-18-top" userLabel="Share Touch Area-top"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="Cell-2" firstItem="View-18" firstAttribute="right" constant="0" priority="985" id="View-18-right" userLabel="Share Touch Area-right"/>
+            <constraint firstItem="View-18" firstAttribute="width" constant="50" priority="971" id="View-18-width" userLabel="Share Touch Area-width"/>
+            <constraint firstItem="View-18" firstAttribute="height" constant="50" priority="972" id="View-18-height" userLabel="Share Touch Area-height"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="Cell-2" firstItem="Label-4" firstAttribute="bottom" constant="0" priority="983" id="Label-4-bottom" userLabel="Joke Label-bottom"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="Cell-2" firstItem="Label-4" firstAttribute="left" constant="20" priority="984" id="Label-4-left" userLabel="Joke Label-left"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="Cell-2" firstItem="Label-4" firstAttribute="right" constant="-20" priority="985" id="Label-4-right" userLabel="Joke Label-right"/>
+            <constraint firstItem="Label-4" firstAttribute="height" constant="110" priority="972" id="Label-4-height" userLabel="Joke Label-height"/>
+            <constraint  firstItem="image-17" firstAttribute="width" constant="50" priority="980" id="image-17-width" userLabel="Image-width"/>
+            <constraint  firstItem="image-17" firstAttribute="height" constant="50" priority="981" id="image-17-height" userLabel="Image-height"/>
+            <constraint multiplier="1" secondAttribute="top" secondItem="Cell-2" firstItem="image-17" firstAttribute="top" constant="10" priority="982" id="image-17-top" userLabel="Image-top"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="Cell-2" firstItem="image-17" firstAttribute="left" constant="20" priority="984" id="image-17-left" userLabel="Image-left"/>
+            <constraint multiplier="1" secondAttribute="top" secondItem="Cell-2" firstItem="Label-13" firstAttribute="top" constant="10" priority="982" id="Label-13-top" userLabel="Name Label-top"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="Cell-2" firstItem="Label-13" firstAttribute="left" constant="80" priority="984" id="Label-13-left" userLabel="Name Label-left"/>
+            <constraint firstItem="Label-13" firstAttribute="width" constant="193" priority="971" id="Label-13-width" userLabel="Name Label-width"/>
+            <constraint firstItem="Label-13" firstAttribute="height" constant="27" priority="972" id="Label-13-height" userLabel="Name Label-height"/>
+            <constraint multiplier="1" secondAttribute="top" secondItem="Cell-2" firstItem="Label-14" firstAttribute="top" constant="30" priority="982" id="Label-14-top" userLabel="Time Label-top"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="Cell-2" firstItem="Label-14" firstAttribute="left" constant="80" priority="984" id="Label-14-left" userLabel="Time Label-left"/>
+            <constraint firstItem="Label-14" firstAttribute="width" constant="122" priority="971" id="Label-14-width" userLabel="Time Label-width"/>
+            <constraint firstItem="Label-14" firstAttribute="height" constant="26" priority="972" id="Label-14-height" userLabel="Time Label-height"/>
+            <constraint multiplier="1" secondAttribute="top" secondItem="Cell-2" firstItem="View-14" firstAttribute="top" constant="24" priority="982" id="View-14-top" userLabel="Share Container-top"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="Cell-2" firstItem="View-14" firstAttribute="right" constant="-20" priority="985" id="View-14-right" userLabel="Share Container-right"/>
+            <constraint firstItem="View-14" firstAttribute="width" constant="16" priority="971" id="View-14-width" userLabel="Share Container-width"/>
+            <constraint firstItem="View-14" firstAttribute="height" constant="4" priority="972" id="View-14-height" userLabel="Share Container-height"/>
+        </constraints>
+                        </tableViewCellContentView>
+                        <constraints>
+                            <constraint firstItem="Cell-2" firstAttribute="left" secondItem="Cell-2-Cell" secondAttribute="left" id="Cell-2-ContentView-left" userLabel="ContentView-Left"/>
+                            <constraint firstItem="Cell-2" firstAttribute="top" secondItem="Cell-2-Cell" secondAttribute="top" id="Cell-2-ContentView-top" userLabel="ContentView-Top"/>
+                            <constraint firstAttribute="bottom" secondItem="Cell-2" secondAttribute="bottom" id="Cell-2-ContentView-bottom" userLabel="ContentView-Bottom"/>
+                            <constraint firstAttribute="right" secondItem="Cell-2" secondAttribute="right" id="Cell-2-ContentView-right" userLabel="ContentView-Right"/>
+                        </constraints>
+                                <connections>
+                                    <outlet property="shareTouchArea" destination="View-18" id="shareTouchArea-Cell-2-Prop"/>
+        
+                                    <outlet property="jokeLabel" destination="Label-4" id="jokeLabel-Cell-2-Prop"/>
+        
+                                    <outlet property="userimage" destination="image-17" id="userimage-Cell-2-Prop"/>
+        
+                                    <outlet property="nameLabel" destination="Label-13" id="nameLabel-Cell-2-Prop"/>
+        
+                                    <outlet property="timeLabel" destination="Label-14" id="timeLabel-Cell-2-Prop"/>
+        
+                                    <outlet property="shareContainer" destination="View-14" id="shareContainer-Cell-2-Prop"/>
+        
+                                    <outlet property="shareContainerFacebookButton" destination="View-15" id="shareContainerFacebookButton-Cell-2-Prop"/>
+        
+                                    <outlet property="shareContainerFacebookButtonImage19" destination="image-28" id="shareContainerFacebookButtonImage19-Cell-2-Prop"/>
+        
+                                    <outlet property="shareContainerTwitterButton" destination="View-16" id="shareContainerTwitterButton-Cell-2-Prop"/>
+        
+                                    <outlet property="shareContainerTwitterButtonImage18" destination="image-29" id="shareContainerTwitterButtonImage18-Cell-2-Prop"/>
+        
+                                    <outlet property="shareContainerCloseButton" destination="View-17" id="shareContainerCloseButton-Cell-2-Prop"/>
+        
+                                    <outlet property="shareContainerCloseButtonImage21" destination="image-30" id="shareContainerCloseButtonImage21-Cell-2-Prop"/>
+        
+                                </connections>
+</tableViewCell>
+        </prototypes>
+    </tableView>
+        </subviews>
+        <constraints>
+            <constraint multiplier="1" secondAttribute="top" secondItem="screen-4de21534-e66e-4dba-991c-aa439b09d6b5" firstItem="Table-2" firstAttribute="top" constant="0" priority="982" id="Table-2-top" userLabel="Posts Table-top"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="screen-4de21534-e66e-4dba-991c-aa439b09d6b5" firstItem="Table-2" firstAttribute="bottom" constant="0" priority="983" id="Table-2-bottom" userLabel="Posts Table-bottom"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="screen-4de21534-e66e-4dba-991c-aa439b09d6b5" firstItem="Table-2" firstAttribute="left" constant="0" priority="984" id="Table-2-left" userLabel="Posts Table-left"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="screen-4de21534-e66e-4dba-991c-aa439b09d6b5" firstItem="Table-2" firstAttribute="right" constant="0" priority="985" id="Table-2-right" userLabel="Posts Table-right"/>
+        </constraints>
+                                <connections>
+                                </connections>
+</view>
+                    <navigationItem key="navigationItem" title="FUNNY STUFF" id="screen-4de21534-e66e-4dba-991c-aa439b09d6b5-NAV-ITEM"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <tabBarItem key="tabBarItem" title=""   id="screen-4de21534-e66e-4dba-991c-aa439b09d6b5-Tab-Item"/>
+                    <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesNavBar" value="NO"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesStatusBar" value="NO"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="lightStatusBar" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="poststable" destination="Table-2" id="poststable-screen-4de21534-e66e-4dba-991c-aa439b09d6b5-Prop"/>
+
+
+
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="screen-4de21534-e66e-4dba-991c-aa439b09d6b5-FR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0" y="3164"/>
+        </scene>
+    
+<!--My Page Navigation Controller-->
+        <scene sceneID="screen-2-NC-Scene">
+            <objects>
+                <navigationController restorationIdentifier="myPageNC" storyboardIdentifier="myPageNC" id="screen-2-NC" title="My Page Navigation Controller" sceneMemberID="viewController" customClass="ANNavigationController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="64"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="screen-2-NC-BAR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="screen-2-VC" kind="relationship" relationship="rootViewController" id="screen-2-NC-ROOT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="screen-2-NC-FR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475" y="2694"/>
+</scene>
+<!--My Page-->
+        <scene sceneID="screen-2-Scene">
+            <objects>
+                <viewController restorationIdentifier="myPage" storyboardIdentifier="myPage" id="screen-2-VC" userLabel="My Page" sceneMemberID="viewController" customClass="APMyPageVC" customModuleProvider="target">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="screen-2-Top"/>
+                        <viewControllerLayoutGuide type="bottom" id="screen-2-Bottom"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="screen-2" >
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <subviews>
+    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="View-6" userLabel="Heder Container"  >
+        <rect key="frame" x="0" y="0" width="375" height="180"/>
+        <color key="backgroundColor" red="0.129842" green="0.1298461" blue="0.129844" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <subviews>
+    <imageView image="cover" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-23" userLabel="Cover Image"   >
+        <rect key="frame" x="0" y="0" width="375" height="180"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gradient-1" userLabel="Black Gradient"   customClass="ANGradientView">
+        <rect key="frame" x="0" y="0" width="375" height="180"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="color" keyPath="anColor1">
+                <color key="value" red="0" green="0" blue="0" alpha="0.2" colorSpace="calibratedRGB"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="color" keyPath="anColor2">
+                <color key="value" red="0" green="0" blue="0" alpha="0.6" colorSpace="calibratedRGB"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </view>
+    <imageView  opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-20" userLabel="User Header Pic"   >
+        <rect key="frame" x="128" y="15" width="120" height="120"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="anCornerRadius">
+                <real key="value" value="60"/>
+            </userDefinedRuntimeAttribute>
+        
+            <userDefinedRuntimeAttribute type="color" keyPath="anBorderColor">
+                <color key="value" red="0.999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="anBorderWidth">
+                <real key="value" value="1"/>
+            </userDefinedRuntimeAttribute>
+        
+            <userDefinedRuntimeAttribute type="string" keyPath="anImageNameOrUrl" value="https://images.unsplash.com/photo-1458696765561-12142eaead13?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=200&amp;h=200&amp;fit=crop&amp;s=276719a359ff8bda06bd35fa1ef818dc"/>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-7" userLabel="Status"   textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text">John Doe</string>
+        <rect key="frame" x="15" y="129" width="345" height="50"/>
+        <color key="backgroundColor" red="0.129842" green="0.1298461" blue="0.129844" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="14" name="AvenirNext-Medium" family="Avenir Next" />
+        <color key="textColor" red="0.999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+        </subviews>
+        <constraints>
+            <constraint multiplier="1" secondAttribute="top" secondItem="View-6" firstItem="image-23" firstAttribute="top" constant="0" priority="982" id="image-23-top" userLabel="Cover Image-top"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="View-6" firstItem="image-23" firstAttribute="bottom" constant="0" priority="983" id="image-23-bottom" userLabel="Cover Image-bottom"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="View-6" firstItem="image-23" firstAttribute="left" constant="0" priority="984" id="image-23-left" userLabel="Cover Image-left"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="View-6" firstItem="image-23" firstAttribute="right" constant="0" priority="985" id="image-23-right" userLabel="Cover Image-right"/>
+            <constraint multiplier="1" secondAttribute="top" secondItem="View-6" firstItem="gradient-1" firstAttribute="top" constant="0" priority="982" id="gradient-1-top" userLabel="Black Gradient-top"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="View-6" firstItem="gradient-1" firstAttribute="bottom" constant="0" priority="983" id="gradient-1-bottom" userLabel="Black Gradient-bottom"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="View-6" firstItem="gradient-1" firstAttribute="left" constant="0" priority="984" id="gradient-1-left" userLabel="Black Gradient-left"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="View-6" firstItem="gradient-1" firstAttribute="right" constant="0" priority="985" id="gradient-1-right" userLabel="Black Gradient-right"/>
+            <constraint multiplier="1" secondAttribute="top" secondItem="View-6" firstItem="image-20" firstAttribute="top" constant="15" priority="982" id="image-20-top" userLabel="User Header Pic-top"/>
+            <constraint secondAttribute="centerX" secondItem="View-6" firstItem="image-20" firstAttribute="centerX" constant="0.5" priority="987" id="image-20-centerHorizontally" userLabel="User Header Pic-centerX"/>
+            <constraint firstItem="image-20" firstAttribute="width" constant="120" priority="971" id="image-20-width" userLabel="User Header Pic-width"/>
+            <constraint firstItem="image-20" firstAttribute="height" constant="120" priority="972" id="image-20-height" userLabel="User Header Pic-height"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="View-6" firstItem="Label-7" firstAttribute="bottom" constant="-1" priority="983" id="Label-7-bottom" userLabel="Status-bottom"/>
+            <constraint secondAttribute="centerX" secondItem="View-6" firstItem="Label-7" firstAttribute="centerX" constant="0" priority="987" id="Label-7-centerHorizontally" userLabel="Status-centerX"/>
+            <constraint firstItem="Label-7" firstAttribute="width" constant="345" priority="971" id="Label-7-width" userLabel="Status-width"/>
+            <constraint firstItem="Label-7" firstAttribute="height" constant="50" priority="972" id="Label-7-height" userLabel="Status-height"/>
+        </constraints>
+    </view>
+    <tableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Table-5" userLabel="Posts Table copy"   alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" pagingEnabled="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28">
+        <rect key="frame" x="0" y="180" width="375" height="423"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="screen-2-VC" id="Table-5-DataSource"/>
+                                    <outlet property="delegate" destination="screen-2-VC" id="Table-5-Delegate"/>
+                                </connections>
+        <color key="separatorColor" red="0.96632" green="0.2752283" blue="0.2894721" alpha="1" colorSpace="calibratedRGB"/>
+        <inset key="separatorInset" minX="0" minY="0.0" maxX="0.0" maxY="0.0"/>
+        <constraints>
+        </constraints>
+        <prototypes>
+                     <tableViewCell rowHeight="170" id="Cell-5-Cell" userLabel="Me Post Cell" selectionStyle="none" indentationWidth="10" reuseIdentifier="mePostCell" clipsSubviews="YES" contentMode="scaleToFill" customClass="APMePostCell" customModuleProvider="target">
+                        <rect key="frame" x="0" y="0" width="375" height="170"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cell-5" userLabel="Cell ContentView"   tableViewCell="Cell-5-Cell">
+        <rect key="frame" x="0" y="0" width="375" height="170"/>
+        <color key="backgroundColor" red="0.999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                            <autoresizingMask key="autoresizingMask"/>
+        <subviews>
+    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="View-19" userLabel="Share Touch Area"  >
+        <rect key="frame" x="325" y="0" width="50" height="50"/>
+        <color key="backgroundColor" red="0.999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                <gestureRecognizers/>
+                                </connections>
+        <constraints>
+        </constraints>
+    </view>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-18" userLabel="Joke Label"   textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text">...</string>
+        <rect key="frame" x="20" y="60" width="335" height="110"/>
+        <color key="backgroundColor" red="0.129842" green="0.1298461" blue="0.129844" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="14" name="AvenirNext-Regular" family="Avenir Next" />
+        <color key="textColor" red="0.1294118" green="0.1294118" blue="0.1294118" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+    <imageView image="" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-31" userLabel="Image"   >
+        <rect key="frame" x="20" y="10" width="50" height="50"/>
+        <color key="backgroundColor" red="0.8352941" green="0.8352941" blue="0.8352941" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="anCornerRadius">
+                <real key="value" value="25"/>
+            </userDefinedRuntimeAttribute>
+        
+            <userDefinedRuntimeAttribute type="color" keyPath="anBorderColor">
+                <color key="value" red="0.2605174" green="0.2605244" blue="0.2605206" alpha="1" colorSpace="calibratedRGB"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="anBorderWidth">
+                <real key="value" value="1"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-19" userLabel="Name Label"   textAlignment="left" lineBreakMode="wordWrap" numberOfLines="4" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text">...</string>
+        <rect key="frame" x="80" y="10" width="193" height="27"/>
+        <color key="backgroundColor" red="0.129842" green="0.1298461" blue="0.129844" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="14" name="AvenirNext-Medium" family="Avenir Next" />
+        <color key="textColor" red="0.1294118" green="0.1294118" blue="0.1294118" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-20" userLabel="Time Label"   textAlignment="left" lineBreakMode="wordWrap" numberOfLines="4" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text">...</string>
+        <rect key="frame" x="80" y="32" width="122" height="26"/>
+        <color key="backgroundColor" red="0.129842" green="0.1298461" blue="0.129844" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="12" name="AvenirNext-Regular" family="Avenir Next" />
+        <color key="textColor" red="0.1294118" green="0.1294118" blue="0.1294118" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="View-20" userLabel="Share Container"  >
+        <rect key="frame" x="339" y="24" width="16" height="4"/>
+        <color key="backgroundColor" red="0.6078432" green="0.7647059" blue="0.9019608" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                <gestureRecognizers/>
+                                </connections>
+        <subviews>
+    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="View-21" userLabel="FacebookButton"  >
+        <rect key="frame" x="12" y="0" width="4" height="4"/>
+        <color key="backgroundColor" red="0.9647059" green="0.2745098" blue="0.2862745" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="anCornerRadius">
+                <real key="value" value="2"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <subviews>
+    <imageView image="Facebook" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-32" userLabel="Image: Facebook" alpha="0"  >
+        <rect key="frame" x="-14" y="-14" width="32" height="32"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="color" keyPath="anImageTint">
+                <color key="value" red="0.999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+        </subviews>
+        <constraints>
+            <constraint secondAttribute="centerY" secondItem="View-21" firstItem="image-32" firstAttribute="centerY" constant="0" priority="986" id="image-32-centerVertically" userLabel="Image: Facebook-centerY"/>
+            <constraint secondAttribute="centerX" secondItem="View-21" firstItem="image-32" firstAttribute="centerX" constant="0" priority="987" id="image-32-centerHorizontally" userLabel="Image: Facebook-centerX"/>
+            <constraint firstItem="image-32" firstAttribute="width" constant="32" priority="971" id="image-32-width" userLabel="Image: Facebook-width"/>
+            <constraint firstItem="image-32" firstAttribute="height" constant="32" priority="972" id="image-32-height" userLabel="Image: Facebook-height"/>
+        </constraints>
+    </view>
+    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="View-22" userLabel="TwitterButton"  >
+        <rect key="frame" x="6" y="0" width="4" height="4"/>
+        <color key="backgroundColor" red="0.9647059" green="0.2745098" blue="0.2862745" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="anCornerRadius">
+                <real key="value" value="2"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <subviews>
+    <imageView image="Twitter" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-33" userLabel="Image: Twitter" alpha="0"  >
+        <rect key="frame" x="-10" y="-10" width="24" height="24"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="color" keyPath="anImageTint">
+                <color key="value" red="0.999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+        </subviews>
+        <constraints>
+            <constraint secondAttribute="centerY" secondItem="View-22" firstItem="image-33" firstAttribute="centerY" constant="0" priority="986" id="image-33-centerVertically" userLabel="Image: Twitter-centerY"/>
+            <constraint secondAttribute="centerX" secondItem="View-22" firstItem="image-33" firstAttribute="centerX" constant="0" priority="987" id="image-33-centerHorizontally" userLabel="Image: Twitter-centerX"/>
+            <constraint firstItem="image-33" firstAttribute="width" constant="24" priority="971" id="image-33-width" userLabel="Image: Twitter-width"/>
+            <constraint firstItem="image-33" firstAttribute="height" constant="24" priority="972" id="image-33-height" userLabel="Image: Twitter-height"/>
+        </constraints>
+    </view>
+    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="View-23" userLabel="CloseButton"  >
+        <rect key="frame" x="0" y="0" width="4" height="4"/>
+        <color key="backgroundColor" red="0.9647059" green="0.2745098" blue="0.2862745" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="anCornerRadius">
+                <real key="value" value="2"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                <gestureRecognizers/>
+                                </connections>
+        <subviews>
+    <imageView image="Close" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-34" userLabel="Image: Close" alpha="0"  >
+        <rect key="frame" x="-10" y="-10" width="24" height="24"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="color" keyPath="anImageTint">
+                <color key="value" red="0.999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+        </subviews>
+        <constraints>
+            <constraint secondAttribute="centerY" secondItem="View-23" firstItem="image-34" firstAttribute="centerY" constant="0" priority="986" id="image-34-centerVertically" userLabel="Image: Close-centerY"/>
+            <constraint secondAttribute="centerX" secondItem="View-23" firstItem="image-34" firstAttribute="centerX" constant="0" priority="987" id="image-34-centerHorizontally" userLabel="Image: Close-centerX"/>
+            <constraint firstItem="image-34" firstAttribute="width" constant="24" priority="971" id="image-34-width" userLabel="Image: Close-width"/>
+            <constraint firstItem="image-34" firstAttribute="height" constant="24" priority="972" id="image-34-height" userLabel="Image: Close-height"/>
+        </constraints>
+    </view>
+        </subviews>
+        <constraints>
+            <constraint multiplier="0.25" secondAttribute="width" secondItem="View-20" firstItem="View-21" firstAttribute="width" constant="0" priority="980" id="View-21-width" userLabel="FacebookButton-width"/>
+            <constraint multiplier="1" secondAttribute="height" secondItem="View-20" firstItem="View-21" firstAttribute="height" constant="0" priority="981" id="View-21-height" userLabel="FacebookButton-height"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="View-20" firstItem="View-21" firstAttribute="right" constant="0" priority="985" id="View-21-right" userLabel="FacebookButton-right"/>
+            <constraint secondAttribute="centerY" secondItem="View-20" firstItem="View-21" firstAttribute="centerY" constant="0" priority="986" id="View-21-centerVertically" userLabel="FacebookButton-centerY"/>
+            <constraint multiplier="0.25" secondAttribute="width" secondItem="View-20" firstItem="View-22" firstAttribute="width" constant="0" priority="980" id="View-22-width" userLabel="TwitterButton-width"/>
+            <constraint multiplier="1" secondAttribute="height" secondItem="View-20" firstItem="View-22" firstAttribute="height" constant="0" priority="981" id="View-22-height" userLabel="TwitterButton-height"/>
+            <constraint secondAttribute="centerY" secondItem="View-20" firstItem="View-22" firstAttribute="centerY" constant="0" priority="986" id="View-22-centerVertically" userLabel="TwitterButton-centerY"/>
+            <constraint secondAttribute="centerX" secondItem="View-20" firstItem="View-22" firstAttribute="centerX" constant="0" priority="987" id="View-22-centerHorizontally" userLabel="TwitterButton-centerX"/>
+            <constraint multiplier="0.25" secondAttribute="width" secondItem="View-20" firstItem="View-23" firstAttribute="width" constant="0" priority="980" id="View-23-width" userLabel="CloseButton-width"/>
+            <constraint multiplier="1" secondAttribute="height" secondItem="View-20" firstItem="View-23" firstAttribute="height" constant="0" priority="981" id="View-23-height" userLabel="CloseButton-height"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="View-20" firstItem="View-23" firstAttribute="left" constant="0" priority="984" id="View-23-left" userLabel="CloseButton-left"/>
+            <constraint secondAttribute="centerY" secondItem="View-20" firstItem="View-23" firstAttribute="centerY" constant="0" priority="986" id="View-23-centerVertically" userLabel="CloseButton-centerY"/>
+        </constraints>
+    </view>
+        </subviews>
+        <constraints>
+            <constraint multiplier="1" secondAttribute="top" secondItem="Cell-5" firstItem="View-19" firstAttribute="top" constant="0" priority="982" id="View-19-top" userLabel="Share Touch Area-top"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="Cell-5" firstItem="View-19" firstAttribute="right" constant="0" priority="985" id="View-19-right" userLabel="Share Touch Area-right"/>
+            <constraint firstItem="View-19" firstAttribute="width" constant="50" priority="971" id="View-19-width" userLabel="Share Touch Area-width"/>
+            <constraint firstItem="View-19" firstAttribute="height" constant="50" priority="972" id="View-19-height" userLabel="Share Touch Area-height"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="Cell-5" firstItem="Label-18" firstAttribute="bottom" constant="0" priority="983" id="Label-18-bottom" userLabel="Joke Label-bottom"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="Cell-5" firstItem="Label-18" firstAttribute="left" constant="20" priority="984" id="Label-18-left" userLabel="Joke Label-left"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="Cell-5" firstItem="Label-18" firstAttribute="right" constant="-20" priority="985" id="Label-18-right" userLabel="Joke Label-right"/>
+            <constraint firstItem="Label-18" firstAttribute="height" constant="110" priority="972" id="Label-18-height" userLabel="Joke Label-height"/>
+            <constraint  firstItem="image-31" firstAttribute="width" constant="50" priority="980" id="image-31-width" userLabel="Image-width"/>
+            <constraint  firstItem="image-31" firstAttribute="height" constant="50" priority="981" id="image-31-height" userLabel="Image-height"/>
+            <constraint multiplier="1" secondAttribute="top" secondItem="Cell-5" firstItem="image-31" firstAttribute="top" constant="10" priority="982" id="image-31-top" userLabel="Image-top"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="Cell-5" firstItem="image-31" firstAttribute="left" constant="20" priority="984" id="image-31-left" userLabel="Image-left"/>
+            <constraint multiplier="1" secondAttribute="top" secondItem="Cell-5" firstItem="Label-19" firstAttribute="top" constant="10" priority="982" id="Label-19-top" userLabel="Name Label-top"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="Cell-5" firstItem="Label-19" firstAttribute="left" constant="80" priority="984" id="Label-19-left" userLabel="Name Label-left"/>
+            <constraint firstItem="Label-19" firstAttribute="width" constant="193" priority="971" id="Label-19-width" userLabel="Name Label-width"/>
+            <constraint firstItem="Label-19" firstAttribute="height" constant="27" priority="972" id="Label-19-height" userLabel="Name Label-height"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="Cell-5" firstItem="Label-20" firstAttribute="left" constant="80" priority="984" id="Label-20-left" userLabel="Time Label-left"/>
+            <constraint firstItem="Label-20" firstAttribute="width" constant="122" priority="971" id="Label-20-width" userLabel="Time Label-width"/>
+            <constraint firstItem="Label-20" firstAttribute="height" constant="26" priority="972" id="Label-20-height" userLabel="Time Label-height"/>
+            <constraint secondAttribute="top" secondItem="Cell-5" firstItem="Label-20" firstAttribute="top" constant="32" priority="973" id="Label-20-top" userLabel="Time Label-top"/>
+            <constraint multiplier="1" secondAttribute="top" secondItem="Cell-5" firstItem="View-20" firstAttribute="top" constant="24" priority="982" id="View-20-top" userLabel="Share Container-top"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="Cell-5" firstItem="View-20" firstAttribute="right" constant="-20" priority="985" id="View-20-right" userLabel="Share Container-right"/>
+            <constraint firstItem="View-20" firstAttribute="width" constant="16" priority="971" id="View-20-width" userLabel="Share Container-width"/>
+            <constraint firstItem="View-20" firstAttribute="height" constant="4" priority="972" id="View-20-height" userLabel="Share Container-height"/>
+        </constraints>
+                        </tableViewCellContentView>
+                        <constraints>
+                            <constraint firstItem="Cell-5" firstAttribute="left" secondItem="Cell-5-Cell" secondAttribute="left" id="Cell-5-ContentView-left" userLabel="ContentView-Left"/>
+                            <constraint firstItem="Cell-5" firstAttribute="top" secondItem="Cell-5-Cell" secondAttribute="top" id="Cell-5-ContentView-top" userLabel="ContentView-Top"/>
+                            <constraint firstAttribute="bottom" secondItem="Cell-5" secondAttribute="bottom" id="Cell-5-ContentView-bottom" userLabel="ContentView-Bottom"/>
+                            <constraint firstAttribute="right" secondItem="Cell-5" secondAttribute="right" id="Cell-5-ContentView-right" userLabel="ContentView-Right"/>
+                        </constraints>
+                                <connections>
+                                    <outlet property="shareTouchArea" destination="View-19" id="shareTouchArea-Cell-5-Prop"/>
+        
+                                    <outlet property="jokeLabel" destination="Label-18" id="jokeLabel-Cell-5-Prop"/>
+        
+                                    <outlet property="userimage" destination="image-31" id="userimage-Cell-5-Prop"/>
+        
+                                    <outlet property="nameLabel" destination="Label-19" id="nameLabel-Cell-5-Prop"/>
+        
+                                    <outlet property="timeLabel" destination="Label-20" id="timeLabel-Cell-5-Prop"/>
+        
+                                    <outlet property="shareContainer" destination="View-20" id="shareContainer-Cell-5-Prop"/>
+        
+                                    <outlet property="shareContainerFacebookButton" destination="View-21" id="shareContainerFacebookButton-Cell-5-Prop"/>
+        
+                                    <outlet property="shareContainerFacebookButtonImage19" destination="image-32" id="shareContainerFacebookButtonImage19-Cell-5-Prop"/>
+        
+                                    <outlet property="shareContainerTwitterButton" destination="View-22" id="shareContainerTwitterButton-Cell-5-Prop"/>
+        
+                                    <outlet property="shareContainerTwitterButtonImage18" destination="image-33" id="shareContainerTwitterButtonImage18-Cell-5-Prop"/>
+        
+                                    <outlet property="shareContainerCloseButton" destination="View-23" id="shareContainerCloseButton-Cell-5-Prop"/>
+        
+                                    <outlet property="shareContainerCloseButtonImage21" destination="image-34" id="shareContainerCloseButtonImage21-Cell-5-Prop"/>
+        
+                                </connections>
+</tableViewCell>
+        </prototypes>
+    </tableView>
+        </subviews>
+        <constraints>
+            <constraint  firstItem="View-6" firstAttribute="height" constant="180" priority="981" id="View-6-height" userLabel="Heder Container-height"/>
+            <constraint multiplier="1" secondAttribute="top" secondItem="screen-2" firstItem="View-6" firstAttribute="top" constant="0" priority="982" id="View-6-top" userLabel="Heder Container-top"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="screen-2" firstItem="View-6" firstAttribute="left" constant="0" priority="984" id="View-6-left" userLabel="Heder Container-left"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="screen-2" firstItem="View-6" firstAttribute="right" constant="0" priority="985" id="View-6-right" userLabel="Heder Container-right"/>
+            <constraint multiplier="1" secondAttribute="top" secondItem="screen-2" firstItem="Table-5" firstAttribute="top" constant="180" priority="982" id="Table-5-top" userLabel="Posts Table copy-top"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="screen-2" firstItem="Table-5" firstAttribute="bottom" constant="0" priority="983" id="Table-5-bottom" userLabel="Posts Table copy-bottom"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="screen-2" firstItem="Table-5" firstAttribute="left" constant="0" priority="984" id="Table-5-left" userLabel="Posts Table copy-left"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="screen-2" firstItem="Table-5" firstAttribute="right" constant="0" priority="985" id="Table-5-right" userLabel="Posts Table copy-right"/>
+        </constraints>
+                                <connections>
+                                </connections>
+</view>
+                    <navigationItem key="navigationItem" title="MY JOKES" id="screen-2-NAV-ITEM"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <tabBarItem key="tabBarItem" title=""   id="screen-2-Tab-Item"/>
+                    <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesNavBar" value="NO"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesStatusBar" value="NO"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="lightStatusBar" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="hederContainer" destination="View-6" id="hederContainer-screen-2-Prop"/>
+                        <outlet property="hederContainerCoverImage" destination="image-23" id="hederContainerCoverImage-screen-2-Prop"/>
+                        <outlet property="hederContainerBlackGradient" destination="gradient-1" id="hederContainerBlackGradient-screen-2-Prop"/>
+                        <outlet property="hederContainerUserHeaderPic" destination="image-20" id="hederContainerUserHeaderPic-screen-2-Prop"/>
+                        <outlet property="hederContainerStatus" destination="Label-7" id="hederContainerStatus-screen-2-Prop"/>
+                        <outlet property="poststable" destination="Table-5" id="poststable-screen-2-Prop"/>
+
+
+
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="screen-2-FR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475" y="3164"/>
+        </scene>
+    
+<!--Post-->
+        <scene sceneID="screen-3-Scene">
+            <objects>
+                <viewController restorationIdentifier="post" storyboardIdentifier="post" id="screen-3-VC" userLabel="Post" sceneMemberID="viewController" customClass="APPostVC" customModuleProvider="target">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="screen-3-Top"/>
+                        <viewControllerLayoutGuide type="bottom" id="screen-3-Bottom"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="screen-3" >
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.9686275" green="0.2745098" blue="0.2901961" alpha="1" colorSpace="calibratedRGB"/>
+        <subviews>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-5" userLabel="Title Label"   textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text">Post Something Funny</string>
+        <rect key="frame" x="38" y="81" width="300" height="40"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="20" name="Futura-Medium" family="Futura" />
+        <color key="textColor" red="0.9960784" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+    <textField opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Text-1" userLabel="Text"   userInteractionEnabled="YES" text="" textAlignment="center" lineBreakMode="wordWrap" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" placeholder="Joke comes here" borderStyle="roundedRect">
+        <rect key="frame" x="15" y="240" width="345" height="51"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="anCornerRadius">
+                <real key="value" value="10"/>
+            </userDefinedRuntimeAttribute>
+        
+            <userDefinedRuntimeAttribute type="color" keyPath="anBorderColor">
+                <color key="value" red="0.999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="anBorderWidth">
+                <real key="value" value="1"/>
+            </userDefinedRuntimeAttribute>
+        
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="14" name="Futura-Medium" family="Futura" />
+        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <textInputTraits key="textInputTraits"  keyboardAppearance="light" returnKeyType="done" />
+        <constraints>
+        </constraints>
+    </textField>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-9" userLabel="Post Label"   textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text">POST</string>
+        <rect key="frame" x="37.5" y="317" width="300" height="50"/>
+        <color key="backgroundColor" red="0.999996" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="anCornerRadius">
+                <real key="value" value="25"/>
+            </userDefinedRuntimeAttribute>
+        
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                <gestureRecognizers/>
+                                    <outletCollection property="gestureRecognizers" destination="screen-3-postLabelTap-GR" appends="YES" id="Label-9-postLabelTap-GR-V-CON"/>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="20" name="Futura-Medium" family="Futura" />
+        <color key="textColor" red="0.96632" green="0.2752283" blue="0.2894721" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-10" userLabel="Demo Caption"   textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text">It doesn&#39;t post for real - Anima is UI / UX only</string>
+        <rect key="frame" x="37" y="365" width="301" height="33"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="13" name="HelveticaNeue" family="Helvetica Neue" />
+        <color key="textColor" red="0.9960784" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+    <imageView image="X icon" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="image-16" userLabel="Close Button"   >
+        <rect key="frame" x="320" y="19" width="55" height="55"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                <gestureRecognizers/>
+                                    <outletCollection property="gestureRecognizers" destination="screen-3-closeButtonTap-GR" appends="YES" id="image-16-closeButtonTap-GR-V-CON"/>
+                                </connections>
+        <constraints>
+        </constraints>
+    </imageView>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-11" userLabel="Credits Details"   textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text">Jokes: icndb.com
+Photos: unsplash.com
+Names: randomuser.me</string>
+        <rect key="frame" x="115.5" y="589" width="144" height="68"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="12" name="HelveticaNeue" family="Helvetica Neue" />
+        <color key="textColor" red="0.9960784" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-12" userLabel="Credits" alpha="0"  textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text">Credits</string>
+        <rect key="frame" x="37" y="564" width="301" height="33"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="12" name="HelveticaNeue-Bold" family="Helvetica Neue" />
+        <color key="textColor" red="0.9960784" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-16" userLabel="Label: Learn More &gt;&gt;"   textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text">Learn More &gt;&gt;</string>
+        <rect key="frame" x="36.5" y="376" width="302" height="57"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                <gestureRecognizers/>
+                                    <outletCollection property="gestureRecognizers" destination="screen-3-label1Tap-GR" appends="YES" id="Label-16-label1Tap-GR-V-CON"/>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="13" name="HelveticaNeue-Bold" family="Helvetica Neue" />
+        <color key="textColor" red="0.9960784" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+        </subviews>
+        <constraints>
+            <constraint multiplier="1" secondAttribute="top" secondItem="screen-3" firstItem="Label-5" firstAttribute="top" constant="81" priority="982" id="Label-5-top" userLabel="Title Label-top"/>
+            <constraint secondAttribute="centerX" secondItem="screen-3" firstItem="Label-5" firstAttribute="centerX" constant="0.5" priority="987" id="Label-5-centerHorizontally" userLabel="Title Label-centerX"/>
+            <constraint firstItem="Label-5" firstAttribute="width" constant="300" priority="971" id="Label-5-width" userLabel="Title Label-width"/>
+            <constraint firstItem="Label-5" firstAttribute="height" constant="40" priority="972" id="Label-5-height" userLabel="Title Label-height"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="screen-3" firstItem="Text-1" firstAttribute="bottom" constant="-376" priority="983" id="Text-1-bottom" userLabel="Text-bottom"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="screen-3" firstItem="Text-1" firstAttribute="left" constant="15" priority="984" id="Text-1-left" userLabel="Text-left"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="screen-3" firstItem="Text-1" firstAttribute="right" constant="-15" priority="985" id="Text-1-right" userLabel="Text-right"/>
+            <constraint secondAttribute="centerX" secondItem="screen-3" firstItem="Text-1" firstAttribute="centerX" constant="0" priority="987" id="Text-1-centerHorizontally" userLabel="Text-centerX"/>
+            <constraint firstItem="Text-1" firstAttribute="height" constant="51" priority="972" id="Text-1-height" userLabel="Text-height"/>
+            <constraint  firstItem="Label-9" firstAttribute="height" constant="50" priority="981" id="Label-9-height" userLabel="Post Label-height"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="screen-3" firstItem="Label-9" firstAttribute="bottom" constant="-300" priority="983" id="Label-9-bottom" userLabel="Post Label-bottom"/>
+            <constraint secondAttribute="centerX" secondItem="screen-3" firstItem="Label-9" firstAttribute="centerX" constant="0" priority="987" id="Label-9-centerHorizontally" userLabel="Post Label-centerX"/>
+            <constraint firstItem="Label-9" firstAttribute="width" constant="300" priority="971" id="Label-9-width" userLabel="Post Label-width"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="screen-3" firstItem="Label-10" firstAttribute="bottom" constant="-269" priority="983" id="Label-10-bottom" userLabel="Demo Caption-bottom"/>
+            <constraint secondAttribute="centerX" secondItem="screen-3" firstItem="Label-10" firstAttribute="centerX" constant="0" priority="987" id="Label-10-centerHorizontally" userLabel="Demo Caption-centerX"/>
+            <constraint firstItem="Label-10" firstAttribute="width" constant="301" priority="971" id="Label-10-width" userLabel="Demo Caption-width"/>
+            <constraint firstItem="Label-10" firstAttribute="height" constant="33" priority="972" id="Label-10-height" userLabel="Demo Caption-height"/>
+            <constraint multiplier="1" secondAttribute="top" secondItem="screen-3" firstItem="image-16" firstAttribute="top" constant="19" priority="982" id="image-16-top" userLabel="Close Button-top"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="screen-3" firstItem="image-16" firstAttribute="right" constant="0" priority="985" id="image-16-right" userLabel="Close Button-right"/>
+            <constraint firstItem="image-16" firstAttribute="width" constant="55" priority="971" id="image-16-width" userLabel="Close Button-width"/>
+            <constraint firstItem="image-16" firstAttribute="height" constant="55" priority="972" id="image-16-height" userLabel="Close Button-height"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="screen-3" firstItem="Label-11" firstAttribute="bottom" constant="-10" priority="983" id="Label-11-bottom" userLabel="Credits Details-bottom"/>
+            <constraint secondAttribute="centerX" secondItem="screen-3" firstItem="Label-11" firstAttribute="centerX" constant="0" priority="987" id="Label-11-centerHorizontally" userLabel="Credits Details-centerX"/>
+            <constraint firstItem="Label-11" firstAttribute="width" constant="144" priority="971" id="Label-11-width" userLabel="Credits Details-width"/>
+            <constraint firstItem="Label-11" firstAttribute="height" constant="68" priority="972" id="Label-11-height" userLabel="Credits Details-height"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="screen-3" firstItem="Label-12" firstAttribute="bottom" constant="-70" priority="983" id="Label-12-bottom" userLabel="Credits-bottom"/>
+            <constraint secondAttribute="centerX" secondItem="screen-3" firstItem="Label-12" firstAttribute="centerX" constant="0" priority="987" id="Label-12-centerHorizontally" userLabel="Credits-centerX"/>
+            <constraint firstItem="Label-12" firstAttribute="width" constant="301" priority="971" id="Label-12-width" userLabel="Credits-width"/>
+            <constraint firstItem="Label-12" firstAttribute="height" constant="33" priority="972" id="Label-12-height" userLabel="Credits-height"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="screen-3" firstItem="Label-16" firstAttribute="bottom" constant="-234" priority="983" id="Label-16-bottom" userLabel="Label: Learn More &gt;&gt;-bottom"/>
+            <constraint secondAttribute="centerX" secondItem="screen-3" firstItem="Label-16" firstAttribute="centerX" constant="0" priority="987" id="Label-16-centerHorizontally" userLabel="Label: Learn More &gt;&gt;-centerX"/>
+            <constraint firstItem="Label-16" firstAttribute="width" constant="302" priority="971" id="Label-16-width" userLabel="Label: Learn More &gt;&gt;-width"/>
+            <constraint firstItem="Label-16" firstAttribute="height" constant="57" priority="972" id="Label-16-height" userLabel="Label: Learn More &gt;&gt;-height"/>
+        </constraints>
+                                <connections>
+                                <gestureRecognizers/>
+                                    <outletCollection property="gestureRecognizers" destination="screen-3-swipeDown-GR" appends="YES" id="screen-3-swipeDown-GR-V-CON"/>
+                                </connections>
+</view>
+                    <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesNavBar" value="YES"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesStatusBar" value="NO"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="lightStatusBar" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <segue destination="screen-4-NC" kind="presentation" identifier="post -> readMoreScreen - Modal" id="post-Seg-1"/>
+                        <outlet property="titleLabel" destination="Label-5" id="titleLabel-screen-3-Prop"/>
+                        <outlet property="textInput" destination="Text-1" id="textInput-screen-3-Prop"/>
+                        <outlet property="postLabel" destination="Label-9" id="postLabel-screen-3-Prop"/>
+                        <outlet property="demoCaption" destination="Label-10" id="demoCaption-screen-3-Prop"/>
+                        <outlet property="closeButton" destination="image-16" id="closeButton-screen-3-Prop"/>
+                        <outlet property="creditsDetails" destination="Label-11" id="creditsDetails-screen-3-Prop"/>
+                        <outlet property="label2" destination="Label-12" id="label2-screen-3-Prop"/>
+                        <outlet property="label1" destination="Label-16" id="label1-screen-3-Prop"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="screen-3-FR" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="down" id="screen-3-swipeDown-GR" userLabel="swipeDown">
+                    <connections>
+                        <action selector="swipeDownWithSender:" destination="screen-3-VC" id="screen-3-swipeDown-CON-VC"/>
+                        
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer id="screen-3-postLabelTap-GR" userLabel="postLabelTap">
+                    <connections>
+                        <action selector="postLabelTapWithSender:" destination="screen-3-VC" id="screen-3-postLabelTap-CON-VC"/>
+                        
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="screen-3-closeButtonTap-GR" userLabel="closeButtonTap">
+                    <connections>
+                        <action selector="closeButtonTapWithSender:" destination="screen-3-VC" id="screen-3-closeButtonTap-CON-VC"/>
+                        
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="screen-3-label1Tap-GR" userLabel="label1Tap">
+                    <connections>
+                        <action selector="label1TapWithSender:" destination="screen-3-VC" id="screen-3-label1Tap-CON-VC"/>
+                        
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="0" y="842"/>
+        </scene>
+    
+<!--Read More Screen Navigation Controller-->
+        <scene sceneID="screen-4-NC-Scene">
+            <objects>
+                <navigationController restorationIdentifier="readMoreScreenNC" storyboardIdentifier="readMoreScreenNC" id="screen-4-NC" title="Read More Screen Navigation Controller" sceneMemberID="viewController" customClass="ANNavigationController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="64"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="screen-4-NC-BAR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="screen-4-VC" kind="relationship" relationship="rootViewController" id="screen-4-NC-ROOT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="screen-4-NC-FR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0" y="1684"/>
+</scene>
+<!--Read More Screen-->
+        <scene sceneID="screen-4-Scene">
+            <objects>
+                <viewController restorationIdentifier="readMoreScreen" storyboardIdentifier="readMoreScreen" id="screen-4-VC" userLabel="Read More Screen" sceneMemberID="viewController" customClass="APReadMoreScreen" customModuleProvider="target">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="screen-4-Top"/>
+                        <viewControllerLayoutGuide type="bottom" id="screen-4-Bottom"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="screen-4" >
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <subviews>
+    <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="View-24" userLabel="View 24"  >
+        <rect key="frame" x="0" y="553" width="375" height="50"/>
+        <color key="backgroundColor" red="0.129842" green="0.1298461" blue="0.129844" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes></userDefinedRuntimeAttributes>
+                                <connections>
+                                <gestureRecognizers/>
+                                    <outletCollection property="gestureRecognizers" destination="screen-4-view24Tap-GR" appends="YES" id="View-24-view24Tap-GR-V-CON"/>
+                                </connections>
+        <subviews>
+    <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Label-15" userLabel="Label: Dismiss"   textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" horizontalHuggingPriority="251" verticalHuggingPriority="251" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" >
+        <string key="text">Dismiss</string>
+        <rect key="frame" x="87.5" y="5" width="200" height="40"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="number" keyPath="letterSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="lineHeight">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+            <userDefinedRuntimeAttribute type="number" keyPath="paragraphSpacing">
+                <real key="value" value="0"/>
+            </userDefinedRuntimeAttribute>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <fontDescription key="fontDescription" pointSize="14" name="Futura-Medium" family="Futura" />
+        <color key="textColor" red="0.9960784" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <nil key="highlightedColor"/>
+        <constraints>
+        </constraints>
+    </label>
+        </subviews>
+        <constraints>
+            <constraint secondAttribute="centerY" secondItem="View-24" firstItem="Label-15" firstAttribute="centerY" constant="0" priority="986" id="Label-15-centerVertically" userLabel="Label: Dismiss-centerY"/>
+            <constraint secondAttribute="centerX" secondItem="View-24" firstItem="Label-15" firstAttribute="centerX" constant="0" priority="987" id="Label-15-centerHorizontally" userLabel="Label: Dismiss-centerX"/>
+            <constraint firstItem="Label-15" firstAttribute="width" constant="200" priority="971" id="Label-15-width" userLabel="Label: Dismiss-width"/>
+            <constraint firstItem="Label-15" firstAttribute="height" constant="40" priority="972" id="Label-15-height" userLabel="Label: Dismiss-height"/>
+        </constraints>
+    </view>
+    <webView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES"  contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="webView-1" userLabel="WebView 1"  >
+        <rect key="frame" x="0" y="0" width="375" height="553"/>
+        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+        <userDefinedRuntimeAttributes>
+            <userDefinedRuntimeAttribute type="string" keyPath="anUrl" value="https://blog.animaapp.com/should-designers-code-efbbe84378a6"/>
+        </userDefinedRuntimeAttributes>
+                                <connections>
+                                </connections>
+        <constraints>
+        </constraints>
+    </webView>
+        </subviews>
+        <constraints>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="screen-4" firstItem="View-24" firstAttribute="bottom" constant="0" priority="983" id="View-24-bottom" userLabel="View 24-bottom"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="screen-4" firstItem="View-24" firstAttribute="left" constant="0" priority="984" id="View-24-left" userLabel="View 24-left"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="screen-4" firstItem="View-24" firstAttribute="right" constant="0" priority="985" id="View-24-right" userLabel="View 24-right"/>
+            <constraint firstItem="View-24" firstAttribute="height" constant="50" priority="972" id="View-24-height" userLabel="View 24-height"/>
+            <constraint multiplier="1" secondAttribute="top" secondItem="screen-4" firstItem="webView-1" firstAttribute="top" constant="0" priority="982" id="webView-1-top" userLabel="WebView 1-top"/>
+            <constraint multiplier="1.0" secondAttribute="bottom" secondItem="screen-4" firstItem="webView-1" firstAttribute="bottom" constant="-50" priority="983" id="webView-1-bottom" userLabel="WebView 1-bottom"/>
+            <constraint multiplier="1" secondAttribute="left" secondItem="screen-4" firstItem="webView-1" firstAttribute="left" constant="0" priority="984" id="webView-1-left" userLabel="WebView 1-left"/>
+            <constraint multiplier="2.0" secondAttribute="centerX" secondItem="screen-4" firstItem="webView-1" firstAttribute="right" constant="0" priority="985" id="webView-1-right" userLabel="WebView 1-right"/>
+        </constraints>
+                                <connections>
+                                </connections>
+</view>
+                    <navigationItem key="navigationItem" title="The Story Behind Anima" id="screen-4-NAV-ITEM"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesNavBar" value="NO"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesStatusBar" value="NO"/>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="lightStatusBar" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="view24" destination="View-24" id="view24-screen-4-Prop"/>
+                        <outlet property="view24Label15" destination="Label-15" id="view24Label15-screen-4-Prop"/>
+                        <outlet property="webView1" destination="webView-1" id="webView1-screen-4-Prop"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="screen-4-FR" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="screen-4-view24Tap-GR" userLabel="view24Tap">
+                    <connections>
+                        <action selector="view24TapWithSender:" destination="screen-4-VC" id="screen-4-view24Tap-CON-VC"/>
+                        
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="0" y="2154"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="" />
+        <image name="Facebook" />
+        <image name="user pagehappy" />
+        <image name="Feed Color" />
+        <image name="Close" />
+        <image name="user pagefeed" />
+        <image name="X icon" />
+        <image name="user pageup icon" />
+        <image name="Twitter" />
+        <image name="cover" />
+        <image name="Happy Color" />
+    </resources>
+</document>
